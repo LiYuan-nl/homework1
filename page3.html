@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--
+This is the register page.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加图书</title>
+
+    <!-- 背景 -->
+    <style>
+        body
+        {
+            background-image:url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg95.699pic.com%2Fxsj%2F1f%2Fww%2F7u.jpg%21%2Ffw%2F700%2Fwatermark%2Furl%2FL3hzai93YXRlcl9kZXRhaWwyLnBuZw%2Falign%2Fsoutheast&refer=http%3A%2F%2Fimg95.699pic.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668746864&t=215857f1f529ba82f21b6c74f688343a');
+            background-size: cover;
+        }
+    </style>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+
+    <!--<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+     Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+<body class="register_page">
+<!-- 上半部分空白填充+返回主页面 -->
+    <div class="fill_blank" style="width: 300px;height: 45px">
+        <button class="home" style="height: 35px; width: 35px" onclick="window.location.href = '/page2.html'">
+            <i class="fa fa-home"></i>
+        </button>
+    </div>
+
+    <!-- 登记框 -->
+    <div class="register_box"
+         style="border:2px solid #a1a1a1;padding:10px 40px;
+	     height:590px;width:800px;border-radius:25px;
+         background-color: rgba(192,192,192,0.5);
+         position: absolute; left: 330px">
+
+        <!--头部，名+注意事项-->
+        <div class="box-header">
+            <h1 class="box-title" style="color:black; text-align:center;margin-bottom: -0.4cm">
+                <i><pre>Add Books to the Storage</pre></i>
+            </h1>
+            <p class="attention" style="color:black; margin-bottom: -0.3cm">
+                <i><small>Attentions:</small> </i>
+                <ol>
+                    <li><i><small>All the forms have to be filled out.</small></i></li>
+                    <li><i><small>The inventory quantity is greater than or equal to 0.</small></i></li>
+                    <li><i><small>The date of publication must bot be later than the current date.</small></i></li>
+                </ol>
+            </p>
+        </div>
+
+        <form action="http://localhost:8080">
+            <!--登记表-->
+            <table class="reg_table" border="1" style="margin-left: 3cm">
+                <!--书名-->
+                <tr>
+                    <td><pre>        Name</pre></td>
+                    <td>
+                        <input type="text" class="input1" id="inputName" placeholder="Name" style="height: 30px; width: 430px; margin-bottom: 0cm"  required>
+                    </td>
+                </tr>
+
+                <!--作者-->
+                <tr>
+                    <td><pre>       Author</pre></td>
+                    <td>
+                        <input type="text" class="input3" id="inputAuthor" placeholder="Author" style="height: 30px; width: 430px; margin-bottom: 0cm"  required>
+                    </td>
+                </tr>
+
+                <!--出版社-->
+                <tr>
+                    <td><pre>     Publisher</pre></td>
+                    <td>
+                        <input type="text" class="input4" id="inputPublisher" placeholder="Publisher" style="height: 30px; width: 430px; margin-bottom: 0cm"  required>
+                    </td>
+                </tr>
+
+                <!--出版日期-->
+                <tr>
+                    <td><pre>  Publication Date</pre></td>
+                    <td>
+                        <input max="2022-10-20" id="input_date" type="date" class="input5" placeholder="Publication Date ( Mustn't be later than current date.)" style="height: 30px; width: 430px; margin-bottom: 0cm" required>
+                    </td>
+                </tr>
+
+                <!--库存数目-->
+                <tr>
+                    <td><pre>Quantity in Storage</pre></td>
+                    <td>
+                        <input type="number" class="input6" id="inputnum" placeholder="Quantity in Storage ( Must be greater than or equal to 0.)" style="height: 30px; width: 430px; margin-bottom: 0cm"  min="0" required>
+                    </td>
+                </tr>
+
+                <!--选择封面-->
+                <tr>
+                    <td><pre>       Cover</pre></td>
+                    <td>
+                        <!--封面1-->
+                        <input  name="cover" type="radio" class="choose1" id="choose1" style="margin-left: 1cm" value="choose1">
+                        <label class="cho-label1" for="choose1" style="color:black;">
+                            <img src="choose1.webp" style="height: 100px">
+                        </label>
+
+                        <!--封面2，默认-->
+                        <input  name="cover" type="radio" class="choose2" id="choose2" style="margin-left: 1cm" value="choose2" checked>
+                        <label class="cho-label2" for="choose2" style="color:black;">
+                            <img src="choose2.webp" style="height: 100px">
+                        </label>
+
+                        <!--封面3，默认-->
+                        <input  name="cover" type="radio" class="choose3" id="choose3" style="margin-left: 1cm" value="choose3">
+                        <label class="cho-label3" for="choose3" style="color:black;">
+                            <img src="choose3.webp" style="height: 100px">
+                        </label>
+                    </td>
+                </tr>
+            </table>
+
+            <!--提交按钮-->
+            <div class="hand_in">
+                <button type="submit" class="hand_in" formtarget="_blank"
+                        style=" height: 40px; width:80px; margin-top: 0.65cm; margin-left: 5.3cm; margin-right: 6cm; border-radius:15px; background-color: Aliceblue; font-size: medium">
+                    <i>Submit</i>
+                </button>
+
+                <button type="reset" class="btn-cancel"
+                        style=" height: 40px; width: 80px; border-radius:15px; background-color: Aliceblue; font-size: medium">
+                    <i>Cancel</i>
+                </button>
+            </div>
+        </form>
+    </div>
+
+
+    <script type="text/javascript">
+        var date_now = new Date().getTime();
+
+        function to_YY_MM_DD(date) {
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            let day = date.getDate();
+            //补0
+            month = (month < 10) ? '0' + month : month;
+            day = (day < 10) ? '0' + day : day;
+            return year + '-' + month + '-' + day;
+        }
+// 233 13123
+        var max = to_YY_MM_DD(date_now);
+        var d = document.getElementById("input_date");
+        d.setAttribute("max",max);
+    </script>
+    <!--<script type="text/javascript">
+        var dateRange = document.querySelector("#dateRange");
+        var date_now = new Date().getTime();
+
+        function to_YY_MM_DD(date) {
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            let day = date.getDate();
+            //补0
+            month = (month < 10) ? '0' + month : month;
+            day = (day < 10) ? '0' + day : day;
+            return year + '-' + month + '-' + day;
+        }
+
+        var max = to_YY_MM_DD(date_now)
+
+        var d=document.getElementById('dateRange')
+
+        d.setAttribute("max", max);
+    </script>-->
+</body>
+</html>

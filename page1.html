@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+This is the login page.
+-->
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="login" content="width=device-width, initial-scale=1">
+    <title>登录</title>
+
+    <!-- 背景 -->
+    <style>
+        body
+        {
+            background-image:url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fno1news.com%2Fwp-content%2Fuploads%2F2020%2F09%2F20200919_5f65dd1c696c6.jpg&refer=http%3A%2F%2Fno1news.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668670610&t=a8983446b36f938bbcddcd355d79d956');
+            background-size: cover;
+        }
+    </style>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+</head>
+
+<body class="login-page">
+    <!-- 上半部分空白填充 -->
+    <div class="fill_blank" style="width: 300px;height: 150px">
+
+    </div>
+
+    <!-- 登录框 -->
+    <div class="login_box"
+         style="border:2px solid #a1a1a1;padding:10px 40px;
+	     height:330px;width:550px;border-radius:25px;
+         background-color: rgba(192,192,192,0.5);
+         position: absolute; left: 490px" >
+
+            <!-- 标题 -->
+            <div class="box-header">
+                <h1 class="box-title" style="color:black; text-align:center">
+                    <i>Welcome to Flourish and Blotts</i>
+                </h1>
+            </div>
+
+            <!-- 输入部分 -->
+            <form class="form-horizontal">
+                <div class="box-body">
+
+                    <!-- 用户名输入：前缀+框 -->
+                    <div class="form-group row">
+                        <label for="inputUsername" class="form-label1" style="color:black; font-size: x-large">
+                            <i>Username</i>
+                        </label>
+
+                        <div class="input1">
+                            <input type="text" class="form-control1" id="inputUsername" placeholder="Username" style="height: 27px; width: 530px; margin-bottom: 0.3cm" required>
+                        </div>
+                    </div>
+
+                    <!-- 密码名输入：前缀+框 -->
+                    <div class="form-group row">
+                        <label for="inputPassword" class="form-label2" style="color:black; font-size: x-large">
+                            <i>Password</i>
+                        </label>
+
+                        <div class="input2">
+                            <input type="password" class="form-control2" id="inputPassword" placeholder="Password " style="height: 27px; width: 530px; margin-bottom: 0.3cm"  required>
+                        </div>
+                    </div>
+
+                    <!-- 记住我 -->
+                    <div class="form-group row">
+                        <div class="remember">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="Check1" style="margin-bottom: 0.8cm">
+                                <label class="form-check-label" for="Check1" style="color:black;">
+                                    <i>Remember me</i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 登录、取消按钮 -->
+                <div class="card-footer">
+                    <button type="button" class="btn-login" onclick="window.location.href ='/page2.html'"
+                            style=" height: 40px; width:80px; margin-left: 2.9cm; margin-right: 4.5cm; border-radius:15px; background-color: Aliceblue; font-size: medium">
+                        <i>Login</i>
+                    </button>
+
+                    <button type="reset" class="btn-cancel"
+                            style=" height: 40px; width: 80px; border-radius:15px; background-color: Aliceblue; font-size: medium">
+                        <i>Cancel</i>
+                    </button>
+                </div>
+            </form>
+    </div>
+</body>
+</html>
